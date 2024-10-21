@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aarya Finance" />
+
+    <title>Aarya Finance</title>
+
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon" />
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/elegant-icons.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- <body>
+    <form id="pdfForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <button type="button" onclick="generatePDF()">Submit</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script>
+        async function generatePDF() {
+            const form = document.getElementById('pdfForm');
+            const name = form.name.value;
+            const address = form.address.value;
+
+            // Load your existing PDF as a base64 string or URL
+            const existingPdfUrl = 'Joining-Letter.pdf';
+            const existingPdfBytes = await fetch(existingPdfUrl).then(res => res.arrayBuffer());
+
+            const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+            const pages = pdfDoc.getPages();
+            const firstPage = pages[0];
+
+            // Ensure coordinates are relative to top-left corner
+            firstPage.drawText(`Name: ${name}`, { x: 15, y: firstPage.getHeight() - 258, size: 12 });
+            firstPage.drawText(`Address: ${address}`, { x: 50, y: firstPage.getHeight() - 70, size: 12 });
+
+            const pdfBytes = await pdfDoc.save();
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'edited-template.pdf';
+            a.click();
+        }
+    </script>
+</body> -->
+  <body>
+    <div class="top-bar-area bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 logo">
+            <a href="index.php">
+              <img src="assets/img/logo.png" class="logo" alt="Logo" />
+            </a>
+          </div>
+          <div class="col-md-9 address-info text-right">
+            <div class="info box">
+              <ul>
+                <li>
+                  <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="info">
+                    <span>Address</span> Sec No.11, Sector-01-B, Vijay Nagar,
+                    Bengaluru - 560040
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">
+                    <i class="fas fa-envelope-open"></i>
+                  </div>
+                  <div class="info">
+                    <span>Email</span> info@aaryafinance.in
+                  </div>
+                </li>
+                <li>
+                  <div class="icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="info"><span>Phone</span> +91 9119-079-049</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Header Top -->
+
+    <!-- Header ============================================= -->
+    <header id="home">
+      <!-- Start Navigation -->
+      <nav
+        class="navbar navbar-default attr-border logo-less small-pad navbar-sticky bootsnav"
+      >
+        <div class="container">
+          <!-- Start Atribute Navigation -->
+          <div class="attr-nav">
+            <ul>
+              <li class="quote-btn"><a href="emi-cal.php">EMI Calculate</a></li>
+            </ul>
+          </div>
+          <!-- End Atribute Navigation -->
+
+          <!-- Start Header Navigation -->
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#navbar-menu"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="index.php">
+              <img src="assets/img/logo.png" class="logo" alt="Logo" />
+            </a>
+          </div>
+          <!-- End Header Navigation -->
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="nav navbar-nav navbar-left" data-in="#" data-out="#">
+              <li>
+                <a href="index.php">Home</a>
+              </li>
+
+              <li class="dropdown">
+                <a
+                  href="#"
+                  class="dropdown-toggle active"
+                  data-toggle="dropdown"
+                  >Services</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a href="group-loan.php">Group Loan</a></li>
+                  <li><a href="personal-loan.php">Personal Loan</a></li>
+                  <li><a href="business-loan.php">Business Loan</a></li>
+                  <li><a href="home-loan.php">Home Loan</a></li>
+                  <li><a href="car-loan.php">Car Loan</a></li>
+                  <li><a href="education-loan.php">Education Loan</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="terms.php">Terms &amp; Conditions</a>
+              </li>
+
+              <li>
+                <a href="about.php">About Us</a>
+              </li>
+
+              <li>
+                <a href="contact.php">contact</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+      </nav>
+      <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+    <!-- Start Breadcrumb 
+      ============================================= -->
+    <div
+      class="breadcrumb-area shadow dark bg-fixed text-center text-light"
+      style="background-image: url(assets/img/2440x1578.png)"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <h1>Joining Application</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="index.php"><i class="fas fa-home"></i> Home</a>
+              </li>
+
+              <li class="active">Joining Application</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- <div class="container default-padding">
+      <form id="pdfForm">
+        <label for="candidateName">Candidate Name (Required):</label>
+        <input
+          type="text"
+          id="candidateName"
+          name="candidateName"
+          required
+        /><br />
+
+        <label for="minTarget">Minimum Target (Required):</label>
+        <input type="number" id="minTarget" name="minTarget" required /><br />
+
+        <label for="maxTarget">Maximum Target (Required):</label>
+        <input type="number" id="maxTarget" name="maxTarget" required /><br />
+
+        <label for="incentive">Incentive (Required):</label>
+        <input type="number" id="incentive" name="incentive" required /><br />
+
+        <label for="location">Location (Required):</label>
+        <input type="text" id="location" name="location" required /><br />
+
+        <label for="relationWith">Relation with:</label>
+        <input type="text" id="relationWith" name="relationWith" /><br />
+
+        <label for="relativeName">Name of Relative (Required):</label>
+        <input
+          type="text"
+          id="relativeName"
+          name="relativeName"
+          required
+        /><br />
+
+        <label for="contactNumber">Contact Number (Required):</label>
+        <input
+          type="tel"
+          id="contactNumber"
+          name="contactNumber"
+          required
+        /><br />
+
+        <label for="salary">Salary (Required):</label>
+        <input type="number" id="salary" name="salary" required /><br />
+
+        <label for="reference">Reference:</label>
+        <input type="text" id="reference" name="reference" /><br />
+
+        <label for="referenceContact">Reference Contact:</label>
+        <input type="tel" id="referenceContact" name="referenceContact" /><br />
+
+        <label for="address1">Address Line 1 (Required):</label>
+        <input type="text" id="address1" name="address1" required /><br />
+
+        <label for="address2">Address Line 2 (Required):</label>
+        <input type="text" id="address2" name="address2" required /><br />
+
+        <button type="button" onclick="generatePDF()">Submit</button>
+      </form>
+    </div> -->
+
+    <div class="container default-padding">
+      <!-- <form method="POST" enctype="multipart/form-data"> -->
+      <form id="pdfForm">
+        <div class="form-group">
+          <label for="candidateName">Candidate Name (Required) </label>
+          <input
+            class="form-control"
+            id="candidateName"
+            type="text"
+            placeholder="Enter your name (upto 18 Characters)"
+            required
+            name="candidateName" 
+            maxlength="18"
+            autofocus
+          />
+        </div>
+        <div class="form-group">
+          <label for="designation">Post (Required) </label>
+          <input
+            class="form-control"
+            id="designation"
+            type="text"
+            placeholder="Enter candidate's post (upto 22 Characters)"
+            required
+            name="designation"
+            maxlength="22"
+          />
+        </div>
+        <div class="form-group">
+          <label for="minTarget">Minimum Target (Required) </label>
+          <input
+            class="form-control"
+            id="minTarget"
+            type="text"
+            placeholder="Minimum Target"
+            required
+            name="minTarget"
+          />
+        </div>
+        <div class="form-group">
+          <label for="maxTarget">Maximum Target (Required) </label>
+          <input
+            class="form-control"
+            id="maxTarget"
+            type="text"
+            placeholder="Maximum Target"
+            required
+            name="maxTarget"
+          />
+        </div>
+        <div class="form-group">
+          <label for="incentive">Incentive (Required) </label>
+          <input
+            class="form-control"
+            id="incentive"
+            type="text"
+            placeholder="Incentive (in %)"
+            required
+            name="incentive"
+          />
+        </div>
+        <div class="form-group">
+          <label for="location">Location (Required) </label>
+          <input
+            class="form-control"
+            id="location"
+            type="text"
+            placeholder="Location"
+            required
+            name="location"
+          />
+        </div>
+        <div class="form-group">
+          <label for="relationWith">Relation with</label>
+          <select name="relationWith" id="relationWith" class="form-control">
+            <option value="son of">Son of</option>
+            <option value="daughter of">Daughter of</option>
+            <option value="wife of">Wife of</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="relativeName">Name of Relative (Required) </label>
+          <input
+            class="form-control"
+            id="relativeName"
+            type="text"
+            placeholder="Name of Relative"
+            required
+            name="relativeName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="contactNumber">Contact Number (Required) </label>
+          <input
+            class="form-control"
+            id="contactNumber"
+            type="tel"
+            placeholder="+91-xxxxxxxxxx"
+            required
+            name="contactNumber"
+            maxlength="10"
+            onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+          />
+        </div>
+        <div class="form-group">
+          <label for="salary">Salary (Required)</label>
+          <input
+            class="form-control"
+            id="salary"
+            type="text"
+            placeholder="Salary demand"
+            required
+            name="salary"
+            maxlength="10"
+          />
+        </div>
+        <div class="form-group">
+          <label for="reference">Reference </label>
+          <input
+            class="form-control"
+            id="reference"
+            type="text"
+            placeholder="Reference Person"
+            name="reference"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="referenceContact">Reference Contact </label>
+          <input
+            class="form-control"
+            id="referenceContact"
+            type="text"
+            placeholder="+91-xxxxxxxxxx"
+            name="referenceContact"
+            required
+            maxlength="10"
+            onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+          />
+        </div>
+        <div class="form-group">
+          <label for="address1">Address Line 1 (Required) </label>
+          <textarea
+            class="form-control"
+            id="address1"
+            rows="3"
+            required
+            placeholder="Address Line 1"
+            name="address1"
+            maxlength="70"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="address2">Address Line 2 (Required) </label>
+          <textarea
+            class="form-control"
+            id="address2"
+            rows="3"
+            required
+            placeholder="Address Line 2"
+            name="address2"
+            maxlength="70"
+          ></textarea>
+        </div>
+        <div class="form-group">
+            <label for="pincode">Pincode (Required)</label>
+            <input
+              class="form-control"
+              id="pincode"
+              type="text"
+              placeholder="Primary Pincode"
+              required
+              name="pincode"
+              maxlength="6"
+            />
+          </div>
+        <button type="button" class="btn btn-primary" onclick="generatePDF()">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <div style="margin-top: 25px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script>
+      async function generatePDF() {
+        const form = document.getElementById("pdfForm");
+
+        // Validate the form
+        // if (!form.checkValidity()) {
+        //   alert("Please fill in all required fields.");
+        //   return;
+        // }
+
+        const candidateName = form.candidateName.value;
+        const designation = form.designation.value;
+        const minTarget = form.minTarget.value;
+        const maxTarget = form.maxTarget.value;
+        const incentive = form.incentive.value;
+        const location = form.location.value;
+        const relationWith = form.relationWith.value;
+        const relativeName = form.relativeName.value;
+        const contactNumber = form.contactNumber.value;
+        const salary = form.salary.value;
+        const reference = form.reference.value;
+        const referenceContact = form.referenceContact.value;
+        const address1 = form.address1.value;
+        const address2 = form.address2.value;
+        const pincode = form.pincode.value;
+
+        // Load your existing PDF as a base64 string or URL
+        const existingPdfUrl = "Joining-Letter.pdf";
+        const existingPdfBytes = await fetch(existingPdfUrl).then((res) =>
+          res.arrayBuffer()
+        );
+
+        const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+        const pages = pdfDoc.getPages();
+        const firstPage = pages[0];
+        const thirdPage = pages[2];
+
+        const font = await pdfDoc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+        const color = PDFLib.rgb(0.95, 0.1, 0.1);
+
+        firstPage.drawText(`${candidateName}`, {
+          x: 51,
+          y: firstPage.getHeight() - 295,
+          size: 12,
+          font,
+          color,
+        });
+        firstPage.drawText(`${candidateName}`, {
+          x: 73,
+          y: firstPage.getHeight() - 372,
+          size: 12,
+          font,
+          color,
+        });
+        firstPage.drawText(`${designation}`, {
+          x: 250,
+          y: firstPage.getHeight() - 388,
+          size: 12,
+          font,
+          color,
+        });
+        firstPage.drawText(`${minTarget}`, {
+          x: 402,
+          y: firstPage.getHeight() - 453,
+          size: 11,
+          font,
+        });
+        firstPage.drawText(`${maxTarget}`, {
+          x: 464,
+          y: firstPage.getHeight() - 453,
+          size: 11,
+          font,
+        });
+        firstPage.drawText(`${incentive}`, {
+          x: 83,
+          y: firstPage.getHeight() - 471,
+          size: 11,
+          font,
+        });
+        firstPage.drawText(`${location}`, {
+          x: 195,
+          y: firstPage.getHeight() - 538,
+          size: 11,
+          font,
+        });
+        firstPage.drawText(`${relationWith}`, {
+          x: 247,
+          y: firstPage.getHeight() - 295,
+          size: 10,
+          font,
+        });
+        firstPage.drawText(`${relativeName}`, {
+          x: 305,
+          y: firstPage.getHeight() - 295,
+          size: 10,
+          font,
+        });
+        firstPage.drawText(`Mob. No : ${contactNumber}`, {
+          x: 14,
+          y: firstPage.getHeight() - 345,
+          size: 10,
+          font,
+        });
+        firstPage.drawText(`${salary}/-`, {
+          x: 355,
+          y: firstPage.getHeight() - 453,
+          size: 11,
+          font,
+          color,
+        });
+        thirdPage.drawText(`${reference}`, {
+          x: 96,
+          y: thirdPage.getHeight() - 656,
+          size: 11,
+          font,
+          color,
+        });
+        thirdPage.drawText(`${referenceContact}`, {
+          x: 56,
+          y: thirdPage.getHeight() - 673,
+          size: 11,
+          font,
+          color,
+        });
+        firstPage.drawText(`${address1}`, {
+          x: 14,
+          y: firstPage.getHeight() - 309,
+          size: 10,
+          font,
+        });
+        firstPage.drawText(`${address2}`, {
+          x: 14,
+          y: firstPage.getHeight() - 321,
+          size: 10,
+          font,
+        });
+        firstPage.drawText(`${pincode}`, {
+          x: 14,
+          y: firstPage.getHeight() - 334,
+          size: 10,
+          font,
+        });
+
+        const pdfBytes = await pdfDoc.save();
+        const blob = new Blob([pdfBytes], { type: "application/pdf" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        // a.download = "edited-template.pdf";
+        a.download = `${candidateName} Joining-Letter.pdf`;
+        a.click();
+      }
+    </script>
+    <!-- Start Contact Area ============================================= -->
+    <div class="contact-area default-padding bg-gray">
+      <div class="container">
+        <div class="row">
+          <div
+            class="contact-items bg-contain"
+            style="background-image: url(assets/img/map.svg)"
+          >
+            <div class="col-md-4 address">
+              <div class="address-items">
+                <ul class="info">
+                  <li>
+                    <h4>Office Location</h4>
+                    <div class="icon">
+                      <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <span
+                      >Sec No.11, Sector-01-B, Vijay Nagar, Bengaluru -
+                      560040</span
+                    >
+                  </li>
+                  <li>
+                    <h4>Office Hours</h4>
+                    <div class="icon"><i class="fas fa-clock"></i></div>
+                    <span
+                      >Mon - Fri 9:00 - 18:00<br />Saturday 10:00 - 16:00</span
+                    >
+                  </li>
+                  <li>
+                    <h4>Phone</h4>
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <span>+91 9119-079-049<br /></span>
+                  </li>
+                  <li>
+                    <h4>Email</h4>
+                    <div class="icon"><i class="fas fa-envelope-open"></i></div>
+                    <span>info@aaryafinance.in</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-8 contact-form">
+              <h2>Let's talk</h2>
+              <p>Fill the form to contact us.</p>
+
+              <form method="post">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        name="name"
+                        placeholder="Name"
+                        type="text"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        name="email"
+                        placeholder="Email*"
+                        type="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        name="phone"
+                        placeholder="Phone"
+                        type="tel"
+                        required
+                        onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+                        maxlength="10"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="form-group comments">
+                      <textarea
+                        class="form-control"
+                        name="message"
+                        placeholder="Tell Us About Project *"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        name="captcha"
+                        placeholder="Enter Code*"
+                        onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+                        type="tel"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <img src="captcha.php" alt="Captcha" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="row">
+                    <button type="submit" name="Contactbtn">
+                      Send Message <i class="fa fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Contact Area -->
+
+    <!-- Start Footer
+      ============================================= -->
+    <footer class="bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="f-items default-padding">
+            <!-- Single Item -->
+            <div class="col-md-6 equal-height item">
+              <div class="f-item">
+                <div class="logo">
+                  <a href="index.php">
+                    <img src="assets/img/logo.png" class="logo" alt="Logo" />
+                  </a>
+                </div>
+                <p>
+                  Aarya Finance Private Limited. is dealing in Shop Loan, Flat
+                  Loan, Personal Loan, Home Loan Agriculture Loan, Plot Loan,
+                  Complex loan, Sale-Purchase Loan, Project Loan, Education
+                  Loan, Pay Slip Loan, Gold Loan, Insurance, Policy Bond Loan,
+                  Car Loan, Machine Loan, Business Loans, Loan Against Property
+                  & Project Etc. We believe in fair dealing and prompt
+                  dispersement of founds on priority Basis. We are dealing all
+                  India Business and Serve to owner client at a very reasonable
+                  cost.
+                </p>
+                <div class="social">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- End Single Item -->
+            <!-- Single Item -->
+            <div class="col-md-3 equal-height item">
+              <div class="f-item recent-post">
+                <h4>Services</h4>
+                <li><a href="group-loan.php">Group Loan</a></li>
+                <li><a href="personal-loan.php">Personal Loan</a></li>
+                <li><a href="business-loan.php">Business Loan</a></li>
+                <li><a href="home-loan.php">Home Loan</a></li>
+              </div>
+            </div>
+            <!-- End Single Item -->
+            <!-- Single Item -->
+            <div class="col-md-3 equal-height item">
+              <div class="f-item recent-post">
+                <h4>Important Links</h4>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About Us</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+                <li><a href="pay-now.php">Pay Now</a></li>
+              </div>
+            </div>
+            <!-- End Single Item -->
+          </div>
+        </div>
+      </div>
+      <!-- Start Footer Bottom -->
+      <div class="footer-bottom bg-dark text-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p>
+                &copy; Copyright 2024. All Rights Reserved by
+                <a href="#">Aarya Finance Private Limited</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Footer Bottom -->
+    </footer>
+    <!-- End Footer -->
+    <!-- jQuery Frameworks
+      ============================================= -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equal-height.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/modernizr.custom.13711.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/progress-bar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jasxep.js"></script>
+  </body>
+</html>
